@@ -1,4 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jamie Park Portfolio
+
+A responsive portfolio starter built with Next.js App Router, TypeScript, Tailwind CSS, shadcn/ui, and Motion.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Make it yours
+
+Update the sample name, biography, projects, email address, and image URLs in `src/components/portfolio-home.tsx`. Edit the page metadata in `src/app/layout.tsx` and adjust the color tokens in `src/app/globals.css`.
+
+## Deploy to Vercel
+
+Import the repository in [Vercel](https://vercel.com/new) or run `npx vercel` from the project directory. Vercel detects Next.js automatically; the production build command is `npm run build`.This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 

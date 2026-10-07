@@ -3,9 +3,7 @@ import RoleView from "@/components/role-view";
 export default function FullStackPage() {
   return (
     <RoleView
-      number="01"
       title="Full-Stack Developer"
-      eyebrow="Product engineering"
       summary="I build thoughtful products from end to end, from the first useful question to the last polished interaction."
       details="I like working across the whole product: shaping the experience, designing the system behind it, and making sure the final result feels clear and dependable."
       color="bg-[#d7e3c4]"

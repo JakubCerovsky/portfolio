@@ -2,11 +2,12 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import {
+  LucideIconData,
   MonitorSmartphone,
   RobotArm,
   Workflow,
 } from "lucide-react";
-import {
+import React, {
   useEffect,
   useRef,
   useState,
@@ -18,7 +19,6 @@ import OrbitsView from "./orbits";
 import InlineView from "./inline";
 
 export type Characteristic = {
-  number: string;
   name: string;
   icon: React.ReactNode;
   color: string;
@@ -28,7 +28,6 @@ export type Characteristic = {
 
 const characteristics: Characteristic[] = [
   {
-    number: "01",
     name: "Full-Stack Developer",
     icon: <Workflow size={32} />,
     color: "bg-[#d7e3c4]",
@@ -36,7 +35,6 @@ const characteristics: Characteristic[] = [
     href: "/full-stack",
   },
   {
-    number: "02",
     name: "Robotics and AI",
     icon: <RobotArm size={32} />,
     color: "bg-[#e6d6c5]",
@@ -44,7 +42,6 @@ const characteristics: Characteristic[] = [
     href: "/robotics-ai",
   },
   {
-    number: "03",
     name: "Frontend Developer",
     icon: <MonitorSmartphone size={32} />,
     color: "bg-[#cfdfd5]",

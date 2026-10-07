@@ -3,9 +3,7 @@ import RoleView from "@/components/role-view";
 export default function FrontendPage() {
   return (
     <RoleView
-      number="03"
-      title="Frontend development"
-      eyebrow="Interface craft"
+      title="Frontend Developer"
       summary="I turn ideas into clear, lively interfaces that feel good to use and hold up under real-world pressure."
       details="I care about the small things that make a digital experience feel considered: rhythm, motion, accessibility, responsive behavior, and the quiet confidence of a well-made component."
       color="bg-[#cfdfd5]"

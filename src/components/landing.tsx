@@ -15,7 +15,7 @@ const initialTextOptions = [
 ];
 
 export default function Landing() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
 
   const [hoveredRole, setHoveredRole] = useState<string | null>(null);
   const [textOptions, setTextOptions] = useState(initialTextOptions);

@@ -8,7 +8,7 @@ export default function RoboticsAiPage() {
       details="The best technical work creates a sense of possibility without asking people to understand every layer underneath. I focus on clear behavior, thoughtful feedback, and interfaces that earn trust."
       color="bg-[#e6d6c5]"
       tools={["Python", "Computer vision", "Prototyping", "Interaction design"]}
-      cvLink="/cv"
+      cvLink="/Robotics_CV.pdf"
       experiences={[
         {
           title: "Robotics and AI Engineer",

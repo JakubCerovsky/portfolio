@@ -40,15 +40,10 @@ export default function RoleCard({
                     scale: 1.1,
                 }}
                 transition={{
-                    position: {
-                        type: 'spring'
-                    },
                     scale: {
                         duration: 0.2,
                     },
                 }}
-                layoutId={`role-${characteristic.name}`} layout
-
                 className={`
           ${characteristic.color}
           flex

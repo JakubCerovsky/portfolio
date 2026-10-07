@@ -8,7 +8,7 @@ export default function FullStackPage() {
       details="I like working across the whole product: shaping the experience, designing the system behind it, and making sure the final result feels clear and dependable."
       color="bg-[#d7e3c4]"
       tools={["TypeScript", "React", "Next.js", "Node.js"]}
-      cvLink="/cv"
+      cvLink="/Robotics_CV.pdf"
       experiences={[
         {
           title: "Full-Stack Developer",

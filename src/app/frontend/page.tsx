@@ -8,7 +8,7 @@ export default function FrontendPage() {
       details="I care about the small things that make a digital experience feel considered: rhythm, motion, accessibility, responsive behavior, and the quiet confidence of a well-made component."
       color="bg-[#cfdfd5]"
       tools={["React", "Tailwind CSS", "TypeScript", "C#", "Motion", "Accessibility"]}
-      cvLink="/cv"
+      cvLink="/Robotics_CV.pdf"
       experiences={[
         {
           title: "Freelance Web Developer",

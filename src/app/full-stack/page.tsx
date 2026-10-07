@@ -1,34 +1,16 @@
 import RoleView from "@/components/role-view";
+import { gls, lego } from "@/lib/experience";
 
 export default function FullStackPage() {
   return (
     <RoleView
       title="Full-Stack Developer"
-      summary="I build thoughtful products from end to end, from the first useful question to the last polished interaction."
-      details="I like working across the whole product: shaping the experience, designing the system behind it, and making sure the final result feels clear and dependable."
+      summary="I build meaningful products end to end, from the first idea to the final interaction."
+      details="As someone who grew up with Minecraft and LEGO, I've always liked building things from start to finish: shaping the experience, designing the systems behind it, and making sure all the pieces work together."
       color="bg-[#d7e3c4]"
-      tools={["TypeScript", "React", "Next.js", "Node.js"]}
-      cvLink="/Robotics_CV.pdf"
-      experiences={[
-        {
-          title: "Full-Stack Developer",
-          company: "Tech Corp",
-          startDate: "2020-01-01",
-          endDate: "2023-12-31",
-          description: "Developed and maintained web applications using React and Node.js.",
-          type: "full-time",
-          location: "San Francisco, CA"
-        },
-        {
-          title: "Software Engineer",
-          company: "Startup Inc.",
-          startDate: "2018-01-01",
-          endDate: "2019-12-31",
-          description: "Worked on various full-stack projects, focusing on user experience and performance.",
-          type: "full-time",
-          location: "New York, NY"
-        }
-      ]}
+      tools={["TypeScript", "React", "C#", "Terraform", "AWS", "Docker"]}
+      cvLink="/Fullstack_CV.pdf"
+      experiences={[lego, gls]}
     />
   );
 }

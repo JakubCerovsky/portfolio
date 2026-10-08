@@ -38,6 +38,7 @@ export default function RoleCard({
       href={characteristic.href}
       target={isBlank ? "_blank" : undefined}
       rel={isBlank ? "noopener noreferrer" : undefined}
+      prefetch={isBlank ? false : undefined}
       className="pointer-events-auto rounded-full"
     >
       <motion.div

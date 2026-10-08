@@ -80,7 +80,7 @@ export default function RoleView({
         </div>
       </section>
 
-      <section className="mt-4 flex min-h-fit flex-col sm:items-center sm:justify-between md:flex-row">
+      <section className="mt-4 flex min-h-fit flex-col sm:items-center sm:justify-between md:items-stretch md:flex-row">
         <div
           className={`flex h-full min-w-[50%] flex-col gap-2 p-8 sm:p-14 ${color}`}
         >
@@ -97,14 +97,14 @@ export default function RoleView({
         </div>
 
         {experiences.length > 0 && (
-          <div className="flex min-h-fit h-full min-w-[50%] flex-col justify-between overflow-hidden bg-[#f1f5ed] border-b border-[#17352c]/15">
+          <div className="flex min-h-fit min-w-0 flex-col justify-between bg-[#f1f5ed] border-b border-[#17352c]/15">
             <nav className="border-b border-[#eee] bg-[#f5f5f5]">
-              <ul className="m-0 flex w-full list-none p-0 text-sm font-medium">
+              <ul className="m-0 flex w-full list-none items-stretch p-0 text-sm font-medium">
                 {experiences.map((experience, index) => (
                   <motion.li
                     key={`${experience.company}-${index}`}
                     initial={false}
-                    className={`relative flex min-h-[50px] h-fit min-w-0 flex-1 cursor-pointer select-none items-center justify-between border-r-2 border-[#ddd] lg:text-lg text-[var(--black)] transition-colors duration-200 ${
+                    className={`relative flex min-h-[50px] min-w-0 flex-1 cursor-pointer select-none items-center justify-between border-r-2 border-[#ddd] lg:text-lg text-[var(--black)] transition-colors duration-200 ${
                       experience === selectedTab
                         ? "bg-[#eee]"
                         : "bg-transparent"
@@ -125,7 +125,7 @@ export default function RoleView({
               </ul>
             </nav>
 
-            <main className="flex flex-1 items-center justify-center">
+            <div className="flex min-w-0 flex-1 items-center justify-center">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${selectedTab.company}-${selectedTab.title}`}
@@ -133,7 +133,7 @@ export default function RoleView({
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -10, opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="flex h-fit w-full flex-col gap-4 p-4 sm:items-center sm:justify-between lg:flex-row"
+                  className="flex h-fit w-full min-w-0 flex-col gap-4 p-4 sm:items-center sm:justify-between lg:flex-row"
                 >
                   {selectedTab.date ? (
                     <div className="flex w-full flex-row-reverse items-center justify-end gap-2 lg:w-1/5 lg:flex-col lg:items-start lg:justify-center">
@@ -147,7 +147,7 @@ export default function RoleView({
                     </div>
                   ) : null}
 
-                  <div className="flex w-full flex-col gap-1">
+                  <div className="flex w-full min-w-0 flex-col gap-1">
                     <div className="flex flex-col items-start lg:flex-row lg:items-center lg:justify-start lg:gap-3">
                       <h3 className="m-0 text-2xl font-bold text-[#17352c]">
                         {selectedTab.title}
@@ -160,7 +160,7 @@ export default function RoleView({
                     <p className="text-sm text-[#52685d]">
                       {selectedTab.location}
                     </p>
-                    <p className="text-md text-[#405b4e]">
+                    <p className="break-words text-md text-[#405b4e]">
                       {selectedTab?.description}
                     </p>
                     {selectedTab.link && (
@@ -176,7 +176,7 @@ export default function RoleView({
                   </div>
                 </motion.div>
               </AnimatePresence>
-            </main>
+            </div>
           </div>
         )}
       </section>

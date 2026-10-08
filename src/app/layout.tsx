@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Jakub Cerovsky",
   description:
-    "Selected work by Jakub Cerovsky, a developer creating thoughtful projects.",
+    "In case you are interested in my projects... Here they are!",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

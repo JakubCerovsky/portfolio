@@ -40,7 +40,7 @@ export default function RoleView({
   const eyeOffset = useEyeTracking(faceRef, reduceMotion);
 
   return (
-    <main className="flex min-h-full w-full flex-col justify-between px-4 py-2 sm:px-20 sm:py-4">
+    <main className="flex min-h-full w-full flex-col justify-between px-4 py-2 md:px-12 lg:px-20 md:py-4">
       <section className="flex w-full items-center justify-between">
         <Link
           href="/"
@@ -50,7 +50,7 @@ export default function RoleView({
             ref={faceRef}
             eyeX={eyeOffset.x}
             eyeY={eyeOffset.y}
-            className="h-auto w-[140px] line-none z-10"
+            className="h-auto w-[95px] sm:w-[110px] md:w-[130px] line-none z-10"
           />
         </Link>
         <TypingAnimation className="text-2xl font-bold hidden md:block">
@@ -98,13 +98,13 @@ export default function RoleView({
 
         {experiences.length > 0 && (
           <div className="flex min-h-fit h-full min-w-[50%] flex-col justify-between overflow-hidden bg-[#f1f5ed] border-b border-[#17352c]/15">
-            <nav className="h-[50px] border-b border-[#eee] bg-[#f5f5f5]">
+            <nav className="border-b border-[#eee] bg-[#f5f5f5]">
               <ul className="m-0 flex w-full list-none p-0 text-sm font-medium">
                 {experiences.map((experience, index) => (
                   <motion.li
                     key={`${experience.company}-${index}`}
                     initial={false}
-                    className={`relative whitespace-nowrap flex h-[50px] min-w-0 flex-1 cursor-pointer select-none items-center justify-between border-r-2 border-[#ddd] lg:text-lg text-[var(--black)] transition-colors duration-200 ${
+                    className={`relative flex min-h-[50px] h-fit min-w-0 flex-1 cursor-pointer select-none items-center justify-between border-r-2 border-[#ddd] lg:text-lg text-[var(--black)] transition-colors duration-200 ${
                       experience === selectedTab
                         ? "bg-[#eee]"
                         : "bg-transparent"

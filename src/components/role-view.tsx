@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, FileUser } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useRef, useState } from "react";
 import { PixelAvatar } from "./pixel-avatar";
@@ -10,6 +10,7 @@ import { TypingAnimation } from "./ui/typing-animation";
 import { Experience } from "@/lib/experience";
 import { characteristics, Role } from "@/lib/characteristics";
 import { useEyeTracking } from "@/hooks/use-eye-tracking";
+import CV from "@/app/CV.png"
 
 type RoleViewProps = {
   title: Role;
@@ -60,21 +61,21 @@ export default function RoleView({
           <RoleCard
             characteristic={{
               name: title,
-              icon: <FileUser />,
+              icon: CV,
               href: cvLink,
-              color: "bg-[#fafafa]",
+              color: "bg-[#f5f5f5]",
               hoverText: "This is my CV.",
             }}
             isBlank
             size="md"
-            onHover={() => {}}
+            onHover={() => { }}
           />
           {visibleCharacteristics.map((char) => (
             <RoleCard
               key={char.name}
               characteristic={char}
               size="md"
-              onHover={() => {}}
+              onHover={() => { }}
             />
           ))}
         </div>
@@ -104,11 +105,10 @@ export default function RoleView({
                   <motion.li
                     key={`${experience.company}-${index}`}
                     initial={false}
-                    className={`relative flex min-h-[50px] min-w-0 flex-1 cursor-pointer select-none items-center justify-between border-r-2 border-[#ddd] lg:text-lg text-[var(--black)] transition-colors duration-200 ${
-                      experience === selectedTab
-                        ? "bg-[#eee]"
-                        : "bg-transparent"
-                    }
+                    className={`relative flex min-h-[50px] min-w-0 flex-1 cursor-pointer select-none items-center justify-between border-r-2 border-[#ddd] lg:text-lg text-[var(--black)] transition-colors duration-200 ${experience === selectedTab
+                      ? "bg-[#eee]"
+                      : "bg-transparent"
+                      }
                      sm:text-sm px-4 md:text-base`}
                     onClick={() => setSelectedTab(experience)}
                   >

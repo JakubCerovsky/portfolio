@@ -1,7 +1,7 @@
 import { Characteristic } from "@/lib/characteristics";
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
-import { cloneElement, isValidElement, type ReactElement } from "react";
 
 type RoleCardProps = {
   characteristic: Characteristic;
@@ -19,15 +19,15 @@ export default function RoleCard({
   onHoverStateChange,
 }: RoleCardProps) {
   const sizeMap = {
-    sm: 18,
-    md: 24,
-    lg: 32,
+    sm: 20,
+    md: 40,
+    lg: 50,
   } as const;
 
   const paddingMap = {
-    sm: "p-4",
-    md: "p-4",
-    lg: "p-8",
+    sm: "p-2",
+    md: "p-3",
+    lg: "p-4",
   } as const;
 
   const iconSize = sizeMap[size];
@@ -39,7 +39,8 @@ export default function RoleCard({
       target={isBlank ? "_blank" : undefined}
       rel={isBlank ? "noopener noreferrer" : undefined}
       prefetch={isBlank ? false : undefined}
-      className="pointer-events-auto rounded-full"
+      aria-label={characteristic.name}
+      className="group relative inline-flex pointer-events-auto rounded-full"
     >
       <motion.div
         initial={{
@@ -78,13 +79,22 @@ export default function RoleCard({
           onHoverStateChange?.(false);
         }}
       >
-        {isValidElement(characteristic.icon)
-          ? cloneElement(
-              characteristic.icon as ReactElement<{ size?: number }>,
-              { size: iconSize },
-            )
-          : characteristic.icon}
+        <Image
+          src={characteristic.icon}
+          alt=""
+          width={iconSize}
+          height={iconSize}
+          loading="eager"
+          style={{ width: iconSize, height: iconSize }}
+          className={`object-contain`}
+        />
       </motion.div>
+      <div
+        role="tooltip"
+        className="invisible absolute bottom-full left-1/2 z-50 -mb-1 -translate-x-1/2 whitespace-nowrap rounded-lg bg-white px-3 py-1.5 text-sm font-normal opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
+      >
+        {!isBlank ? characteristic.name : "CV"}
+      </div>
     </Link>
   );
 }

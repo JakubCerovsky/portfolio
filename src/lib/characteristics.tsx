@@ -1,5 +1,7 @@
-import type { ReactNode } from "react";
-import { MonitorSmartphone, Bot, Layers3 } from "lucide-react";
+import Bot from "@/app/Bot.png"
+import Layers from "@/app/Layers.png"
+import UI from "@/app/UI.png"
+import { StaticImageData } from "next/image";
 
 export type Role =
   | "Full-Stack Developer"
@@ -8,7 +10,7 @@ export type Role =
 
 export type Characteristic = {
   name: Role;
-  icon: ReactNode;
+  icon: StaticImageData;
   color: string;
   hoverText: string;
   href: string;
@@ -17,21 +19,21 @@ export type Characteristic = {
 export const characteristics: Characteristic[] = [
   {
     name: "Full-Stack Developer",
-    icon: <Layers3 />,
+    icon: Layers,
     color: "bg-[#d7e3c4]",
     hoverText: "I build meaningful products from end to end.",
     href: "/full-stack",
   },
   {
     name: "Robotics and AI",
-    icon: <Bot size={32} />,
+    icon: Bot,
     color: "bg-[#e6d6c5]",
     hoverText: "I give machines a purpose.",
     href: "/robotics-ai",
   },
   {
     name: "Frontend Developer",
-    icon: <MonitorSmartphone size={32} />,
+    icon: UI,
     color: "bg-[#cfdfd5]",
     hoverText: "I turn ideas into friendly user interfaces.",
     href: "/frontend",

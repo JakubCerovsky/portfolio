@@ -11,16 +11,19 @@ export default function OrbitsView({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="hidden md:contents">
+    <div className="pointer-events-none absolute inset-0 hidden md:block">
       <OrbitingCircles radius={280} duration={20} reverse={true}>
-        <div className="w-[10px] h-[10px] bg-primary rounded-full" />
-        <div className="w-[10px] h-[10px] bg-primary rounded-full" />
-        <div className="w-[10px] h-[10px] bg-primary rounded-full" />
+        <div className="w-[7px] h-[7px] bg-primary" />
+        <div className="w-[7px] h-[7px] bg-primary" />
+        <div className="w-[7px] h-[7px] bg-primary" />
+        <div className="w-[7px] h-[7px] bg-primary" />
+        <div className="w-[7px] h-[7px] bg-primary" />
       </OrbitingCircles>
       <OrbitingCircles
         radius={280}
         duration={20}
         speed={1}
+        iconSize={104}
         className={isHovered ? "[animation-play-state:paused]" : ""}
       >
         {characteristics.map((char) => (

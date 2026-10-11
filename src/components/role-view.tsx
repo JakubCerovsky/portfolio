@@ -181,7 +181,7 @@ export default function RoleView({
         )}
       </section>
 
-      <section className="flex flex-wrap items-center px-4 py-14 sm:py-10 lg:justify-around">
+      <section className="flex flex-wrap items-center py-14 sm:py-10 lg:justify-around">
         <p className="text-xl font-semibold uppercase tracking-[0.18em] text-[#e75c43] mb-4 lg:mb-0">
           How I work
         </p>
